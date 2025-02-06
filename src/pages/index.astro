@@ -1,0 +1,71 @@
+---
+import "../styles/global.css";
+import Layout from "../layouts/Layout.astro";
+import LandingHeader from "../components/LandingHeader.astro";
+import HeroSection from "../components/HeroSection.astro";
+import ModelYSection from "../components/ModelYSection.astro";
+import Section from "../components/Section.astro";
+---
+
+<Layout title="Coches eléctricos, energía solar y limpia">
+  <LandingHeader />
+
+  <main
+    class="snap-y snap-mandatory relative w-screen h-screen overflow-auto scroll-auto"
+  >
+    <div class="snap-center">
+      <Section
+        title="Disfrute de Tesla"
+        subtitle="Programe una prueba de conducción hoy mismo"
+        color="white"
+      >
+        <div slot="footer">
+          <a
+            href="#"
+            class="border-[3px] border-white bg-white/5 backdrop-blur-sm text-sm rounded font-medium text-white px-12 py-2 inline-block hover:text-black hover:bg-white transition-colors"
+          >
+            Prueba de conducción
+          </a>
+        </div>
+
+        <video
+          slot="background"
+          class="object-center object-cover h-full w-full"
+          autoplay
+          muted
+          loop
+          src="/public/video.webm"></video>
+      </Section>
+    </div>
+
+    <div class="snap-center">
+      <Section
+        title="Model Y"
+        subtitle="Concertar una prueba de conducción"
+        color="black"
+      >
+        <div class="flex gap-x-6 mx-auto" slot="footer">
+          <a
+            href="#"
+            class="bg-gray-600 text-sm rounded font-medium text-white px-12 py-3 inline-block hover:text-black hover:bg-gray-500 transition-colors"
+          >
+            Explorar inventario
+          </a>
+          <a
+            href="#"
+            class="bg-white text-sm rounded font-medium text-black px-12 py-3 hover:text-white hover:bg-black transition-colors inline-flex justify-center items-center"
+          >
+            Pedido personalizado
+          </a>
+        </div>
+
+        <img
+          slot="background"
+          src="/public/model-y.avif"
+          alt="Model Y"
+          class="h-full w-full object-cover object-center"
+        />
+      </Section>
+    </div>
+  </main>
+</Layout>
